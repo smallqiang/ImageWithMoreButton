@@ -38,7 +38,7 @@
     _imageView.userInteractionEnabled = YES;
     [self.view addSubview:_imageView];
     
-    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapgImage:)];
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImage:)];
     [_imageView addGestureRecognizer:gesture];
     
     ButtonFactory *factory = [[ButtonFactory alloc] init];
@@ -132,7 +132,7 @@
     }
 }
 
--(void)tapgImage:(UITapGestureRecognizer *)gesture
+-(void)tapImage:(UITapGestureRecognizer *)gesture
 {
     if (!_tipsLabel.isHidden) {
         _tipsLabel.hidden = YES;
